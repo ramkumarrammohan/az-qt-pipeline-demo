@@ -48,10 +48,10 @@ steps:
 # 4
 - task: CopyFiles@2
   inputs:
-  contents: |
-    $(Build.SourcesDirectory)\\release\\az-qt-pipeline-demo.exe
+    contents: |
+      $(Build.SourcesDirectory)\\release\\az-qt-pipeline-demo.exe
     targetFolder: $(Build.ArtifactStagingDirectory)
 - task: PublishBuildArtifacts@1
   inputs:
-  pathToPublish: $(Build.ArtifactStagingDirectory)
-  artifactName: Windows_release
+    pathToPublish: $(Build.ArtifactStagingDirectory)
+    artifactName: Windows_release
